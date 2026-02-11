@@ -1,17 +1,6 @@
-import { useRef } from "react";
 import "../styles/Projects.css";
 
 export default function Projects() {
-  const scrollRef = useRef(null);
-
-  const scrollLeft = () => {
-    scrollRef.current.scrollBy({ left: -424, behavior: "smooth" });
-  };
-
-  const scrollRight = () => {
-    scrollRef.current.scrollBy({ left: 424, behavior: "smooth" });
-  };
-
   return (
     <section className="projects">
       {/* TEXT FRAME */}
@@ -26,42 +15,58 @@ export default function Projects() {
         </a>
       </div>
 
-      {/* DESKTOP ARROWS */}
-      <div className="projects-controls">
-        <button onClick={scrollLeft}>←</button>
-        <button onClick={scrollRight}>→</button>
-      </div>
-
       {/* CARDS */}
-      <div className="projects-cards" ref={scrollRef}>
-        {[
-          {
-            type: "Crowdfund",
-            title: "Funding rates page",
-          },
-          {
-            type: "Edition",
-            title: "Tradingview integration",
-          },
-          {
-            type: "Entry",
-            title: "Rewards optimization research and paper",
-          },
-        ].map((item, index) => (
-          <div className="project-card" key={index}>
-            <span className="project-type">{item.type}</span>
-            <h3>{item.title}</h3>
-            <p className="amount">Funding amount · $5,000 – $6,000</p>
-            <p className="desc">
-              Grant will be used to build a dedicated application aligned with
-              dYdX ecosystem goals.
-            </p>
-            <div className="avatars">
-              <span>👤</span>
-              <span>👤</span>
-            </div>
+      <div className="projects-cards">
+        <div className="project-card">
+          <span className="project-type">Crowdfund</span>
+          <h3>Funding rates page</h3>
+          <p className="amount">Funding amount · $5,000 – $6,000</p>
+          <p className="desc">
+            Grant will be used to build a dedicated web app to give traders a
+            view of all dYdX asset funding rates across multiple timeframes.
+            The page will be interactive to include deep diving across
+            different assets and historical analysis of changing rates.
+          </p>
+
+          <div className="avatars">
+            <span>👤</span>
+            <span>👤</span>
           </div>
-        ))}
+        </div>
+
+        <div className="project-card">
+          <span className="project-type">Edition</span>
+          <h3>Tradingview integration</h3>
+          <p className="amount">Funding amount · $5,000 – $6,000</p>
+          <p className="desc">
+            The grant will be used to build a web application that integrates
+            Tradingview strategies into a dYdX Trading account to execute
+            trades directly through a strategy.
+          </p>
+
+          <div className="avatars">
+            <span>👤</span>
+            <span>👤</span>
+            <span>👤</span>
+          </div>
+        </div>
+
+        <div className="project-card">
+          <span className="project-type">Entry</span>
+          <h3>Rewards optimization research and paper</h3>
+          <p className="amount">Funding amount · $5,000 – $6,000</p>
+          <p className="desc">
+            The Grant will be used to write a full research report and code
+            samples that will determine optimal trading strategies for rewards
+            maximization.
+          </p>
+
+          <div className="avatars">
+            <span>👤</span>
+            <span>👤</span>
+            <span>👤</span>
+          </div>
+        </div>
       </div>
     </section>
   );

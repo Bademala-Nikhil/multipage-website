@@ -1,17 +1,17 @@
 * {
   box-sizing: border-box;
-  font-family: "JetBrains Mono", monospace;
 }
 
-/* HERO LAYOUT */
+/* HERO SECTION */
 .hero {
   width: 100%;
   max-width: 1440px;
-  min-height: 696px;
+  min-height: auto;
 
 
-  margin:  auto;
-  padding-top: 120px;
+
+  margin: 0 auto;
+  padding: 120px 16px 80px 16px;
 
   background: #000000;
   color: #ffffff;
@@ -23,8 +23,8 @@
 
 /* HEADING FRAME */
 .hero-heading-frame {
-  width: 808px;
-  height: 352px;
+  width: 100%;
+  max-width: 808px;
 
   display: flex;
   flex-direction: column;
@@ -41,49 +41,44 @@
   line-height: 1.2;
 }
 
-/* ACTION BUTTONS */
+/* BUTTONS */
 .hero-actions {
   display: flex;
   gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.btn-secondary {
-  height: 48px;
-  padding: 0 24px;
-
-  background: #2f3146;
-  color: #ffffff;
-
-  border: none;
-  border-radius: 12px;
-
-  font-size: 16px;
-  cursor: pointer;
-}
-
+.btn-secondary,
 .btn-primary {
   height: 48px;
   padding: 0 24px;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
 
+.btn-secondary {
+  background: #2f3146;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-primary {
   background: #6f73ff;
   color: #ffffff;
-
   border: none;
-  border-radius: 12px;
-
-  font-size: 16px;
   font-weight: 600;
-  cursor: pointer;
 
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-/* STATS ROW */
+/* STATS */
 .hero-stats {
-  width: 808px;
-  height: 56px;
+  width: 100%;
+  max-width: 808px;
 
   margin-top: 64px;
 
@@ -92,6 +87,7 @@
   gap: 48px;
 
   text-align: center;
+  flex-wrap: wrap;
 }
 
 .stat strong {
@@ -105,20 +101,8 @@
   opacity: 0.8;
 }
 
-/* ========================= */
-/* MOBILE RESPONSIVE */
-/* ========================= */
+/* MOBILE */
 @media (max-width: 768px) {
-  .hero {
-    height: auto;
-    padding: 80px 16px;
-  }
-
-  .hero-heading-frame {
-    width: 100%;
-    height: auto;
-  }
-
   .hero-title {
     font-size: 36px;
   }
@@ -135,9 +119,6 @@
   }
 
   .hero-stats {
-    width: 100%;
-    height: auto;
-
     flex-direction: column;
     gap: 24px;
   }

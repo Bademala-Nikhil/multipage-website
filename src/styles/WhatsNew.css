@@ -7,9 +7,9 @@
 .whatsnew {
   width: 100%;
   max-width: 1440px;
-  min-height: 840px;
+  
 
-  margin: auto;
+  margin: 0 auto;
   padding: 80px 108px;
 
   background: #000000;

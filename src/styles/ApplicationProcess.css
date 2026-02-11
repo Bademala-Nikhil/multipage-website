@@ -7,9 +7,10 @@
 .process {
   width: 100%;
   max-width: 1440px;
-  height: 832px;
+  height: auto;
 
-  margin: auto;
+
+  margin: 0 auto;
 
   padding: 80px 101px;
 

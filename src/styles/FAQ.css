@@ -7,9 +7,10 @@
 .faq {
   width: 100%;
   max-width: 1440px;
-  height: 872px;
+  height: auto;
 
-  margin: auto;
+
+  margin: 0 auto;
   padding: 80px 0;
 
   background: #000000;
@@ -45,8 +46,10 @@
 
 /* FAQ LIST CONTAINER */
 .faq-list {
-  width: 808px;
+  width: 100%;
+  max-width: 808px;
 }
+
 
 /* FAQ ITEM */
 .faq-item {
@@ -81,7 +84,7 @@
 
 /* DIVIDER (SPECTOR 808 × 1) */
 .faq-divider {
-  width: 808px;
+  width: 100%;
   height: 1px;
   background: rgba(255, 255, 255, 0.2);
 }
