@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* SECTION LAYOUT */
+.process {
+  width: 100%;
+  max-width: 1440px;
+  height: 832px;
+
+  margin: auto;
+
+  padding: 80px 101px;
+
+  background: #000000;
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+
+/* TOP FRAME */
+.process-heading {
+  width: 600px;
+  height: 112px;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.process-heading h2 {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.process-heading p {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+/* CARDS WRAPPER */
+.process-cards {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+}
+
+/* EACH CARD */
+.process-card {
+  width: 392px;
+  min-height: 480px;
+
+  background: #393953;
+  border-radius: 16px;
+
+  padding: 32px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* STEP NUMBER */
+.step {
+  font-size: 28px;
+  opacity: 0.8;
+}
+
+/* TITLE */
+.process-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* DESCRIPTION */
+.process-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Slight Figma rotation look */
+.card-2 {
+  transform: rotate(-3deg);
+}
+
+.card-3 {
+  transform: rotate(2deg);
+}
+
+/* ========================= */
+/* MOBILE RESPONSIVE */
+/* ========================= */
+@media (max-width: 1024px) {
+  .process {
+    height: auto;
+    padding: 64px 24px;
+    gap: 48px;
+  }
+
+  .process-heading {
+    width: 100%;
+    height: auto;
+  }
+
+  .process-heading h2 {
+    font-size: 32px;
+  }
+
+  .process-heading p {
+    font-size: 14px;
+  }
+
+  .process-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .process-card {
+    width: 100%;
+    max-width: 392px;
+    height: auto;
+  }
+
+  .card-2,
+  .card-3 {
+    transform: none;
+  }
+}

@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* HERO LAYOUT */
+.hero {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 696px;
+
+
+  margin:  auto;
+  padding-top: 120px;
+
+  background: #000000;
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* HEADING FRAME */
+.hero-heading-frame {
+  width: 808px;
+  height: 352px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  text-align: center;
+}
+
+/* TITLE */
+.hero-title {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* ACTION BUTTONS */
+.hero-actions {
+  display: flex;
+  gap: 24px;
+}
+
+.btn-secondary {
+  height: 48px;
+  padding: 0 24px;
+
+  background: #2f3146;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 12px;
+
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  height: 48px;
+  padding: 0 24px;
+
+  background: #6f73ff;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 12px;
+
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* STATS ROW */
+.hero-stats {
+  width: 808px;
+  height: 56px;
+
+  margin-top: 64px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+
+  text-align: center;
+}
+
+.stat strong {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.stat span {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* ========================= */
+/* MOBILE RESPONSIVE */
+/* ========================= */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 80px 16px;
+  }
+
+  .hero-heading-frame {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-stats {
+    width: 100%;
+    height: auto;
+
+    flex-direction: column;
+    gap: 24px;
+  }
+}

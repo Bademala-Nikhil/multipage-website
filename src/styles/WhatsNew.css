@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* SECTION LAYOUT */
+.whatsnew {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 840px;
+
+  margin: auto;
+  padding: 80px 108px;
+
+  background: #000000;
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+
+/* TOP TEXT FRAME */
+.whatsnew-text {
+  width: 600px;
+  height: 160px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  text-align: center;
+}
+
+.whatsnew-text h2 {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.whatsnew-text p {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.whatsnew-link {
+  color: #6f73ff;
+  text-decoration: none;
+  display: inline-flex;
+  gap: 8px;
+}
+
+/* CARDS WRAPPER */
+.whatsnew-cards {
+  display: flex;
+  gap: 32px;
+}
+
+/* BLOG CARD */
+.blog-card {
+  width: 392px;
+  height: 440px;
+
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  background: #393953;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* TOP IMAGE AREA */
+.blog-image {
+  height: 220px;
+
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+
+  background: #1f2033;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+
+  position: relative;
+}
+
+.blog-image span {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.blog-image h3 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-top: 8px;
+}
+
+/* BOTTOM CONTENT */
+.blog-content {
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.blog-category {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.blog-content h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.blog-date {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+/* ========================= */
+/* MOBILE RESPONSIVE */
+/* ========================= */
+
+/* ========================= */
+/* MOBILE RESPONSIVE */
+/* ========================= */
+@media (max-width: 768px) {
+
+  .whatsnew {
+    height: auto;
+    padding: 64px 16px;
+    gap: 48px;
+  }
+
+  /* TEXT FRAME */
+  .whatsnew-text {
+    width: 100%;
+    height: auto;
+    padding: 0 8px;
+  }
+
+  .whatsnew-text h2 {
+    font-size: 32px;
+  }
+
+  .whatsnew-text p {
+    font-size: 14px;
+  }
+
+  /* STACK CARDS VERTICALLY */
+  .whatsnew-cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    overflow: visible;   /* 🚫 remove scroll */
+  }
+
+  .blog-card {
+    width: 100%;
+    height: auto;        /* flexible height */
+  }
+
+  .blog-image {
+    height: 200px;
+  }
+
+  .blog-image h3 {
+    font-size: 22px;
+  }
+
+  .blog-content h4 {
+    font-size: 18px;
+  }
+}
